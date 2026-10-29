@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <h1>Expense Tracker</h1>
+
+    <form id="expense-form">
+      <input id="desc" type="text" placeholder="Description">
+      <input id="amount" type="number" step="0.01" placeholder="Amount">
+      <select id="category">
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="fun">Fun</option>
+        <option value="bills">Bills</option>
+      </select>
+      <button type="submit">Add expense</button>
+    </form>
+    <p id="form-error" class="error" hidden></p>
+
+    <div class="toolbar">
+      <label>Show
+        <select id="filter">
+          <option value="all">All categories</option>
+          <option value="food">Food</option>
+          <option value="transport">Transport</option>
+          <option value="fun">Fun</option>
+          <option value="bills">Bills</option>
+        </select>
+      </label>
+      <button type="button" id="sort-btn">Sort by amount: off</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr><th>Description</th><th>Category</th><th>Amount</th><th></th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p id="no-rows" class="empty">No expenses to show.</p>
+
+    <p class="total">Total: <strong id="total">0.00</strong></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "dom-03-expense-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Exercise 3 - Expense Tracker (array state + render) - starter with tests",
+  "scripts": {
+    "test": "node --test --test-reporter=./test/reporter.mjs test/expenses.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}
